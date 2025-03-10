@@ -4,16 +4,17 @@
 html,body{
     height: 100%;
 }
-body{
+body {
     margin: 0;
     padding: 2rem;
     display: grid;
     gap: 1rem;
     align-items: center;
-    background-color: #fbe8a6;
+    background: linear-gradient(135deg, #d4b89d, #b68c5e); /* Gradiente con colores más oscuros */
     text-align: center;
     font-family: Arial, sans-serif;
 }
+
 a {
     color: inherit;
     text-decoration: none;
