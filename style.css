@@ -7,18 +7,31 @@ html,body{
 body{
     margin: 0;
     padding: 2rem;
-    background-color: hsl(0 0% 0%);
     display: grid;
     gap: 1rem;
     align-items: center;
+    background-color: #fbe8a6;
+    text-align: center;
+    font-family: Arial, sans-serif;
 }
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
 .map-container {
     position: relative;
-    width: 100%; /* Ocupa todo el ancho */
-    max-width: 800px; /* Máximo tamaño opcional */
-    padding-bottom: 56.25%; /* Proporción 16:9 */
-    margin: auto; /* Centrar en la página */
+    width: 100%;
+    max-width: 800px;
+    padding-bottom: 56.25%;
+    margin: 20px auto;
+    border: 25px solid transparent;
+    border-image: url('images/Border-Imager.png') 125 repeat; /* Reduce 'slice' y usa 'repeat' */
+    border-radius: 20px;
 }
+
+
+
 
 .map-container iframe {
     position: absolute;
@@ -29,20 +42,64 @@ body{
     border: 0;
 }
 
+.arrow-container {
+    margin-top: 20px;
+    animation: spin 2s infinite linear;
+}
+
+/* Estilos de la flecha */
+.arrow {
+    font-size: 3em;
+    color: #ff5733;
+    transform: rotate(0deg); /* Inicia apuntando hacia abajo */
+}
+
+/* Animación para que la flecha gire */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg); /* Inicia apuntando hacia abajo */
+    }
+    50% {
+        transform: rotate(180deg); /* Giro hacia arriba */
+    }
+    100% {
+        transform: rotate(360deg); /* Vuelta completa */
+    }
+}
+
 h1{
-    font-family: system-ui, sans-serif;
-    color: hsl(0, 0%, 100%);
+    color: #ff5733;
     text-align: center;
+    font-family: 'Arial', sans-serif; /* Puedes usar una fuente moderna */
+    font-style: italic; /* Cursiva */
+    font-size: 2em; /* Tamaño grande */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave para un toque bonito */
+    letter-spacing: 2px; /* Espaciado entre letras */
+    margin-top: 20px; /* Espacio en la parte superior */
+    margin-bottom: 20px; /* Espacio en la parte inferior */
     >span:last-of-type{
         color: hsl(96, 100%, 49%);
     }
 }
-
+h2{
+    color: #ff5733;
+    text-align: center;
+    font-family: 'Arial', sans-serif; /* Puedes usar una fuente moderna */
+    font-style: italic; /* Cursiva */
+    font-size: 1.5rem; /* Tamaño grande */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave para un toque bonito */
+    letter-spacing: 2px; /* Espaciado entre letras */
+    margin-top: 20px; /* Espacio en la parte superior */
+    margin-bottom: 20px; /* Espacio en la parte inferior */
+    >span:last-of-type{
+        color: hsl(96, 100%, 49%);
+    }
+}
 .countdown{
-    --number-color: hsl(0 0% 100%);
-    --text-color: hsl(0 0% 25%);
+    --number-color: #ff5733;
+    --text-color: #ff5733;
     --dot-color: hsl(0 0% 10%);
-    --dot-color-remaining: hsl(96,100%, 49%);
+    --dot-color-remaining: black;
     --dot-color-active: hsl(0 100% 50%);
     display: grid;
     grid-template-columns: repeat(4,1fr);
@@ -59,7 +116,7 @@ h1{
             color: hsl(0, 0%, 100%);
             display: grid;
             text-align: center;
-            font-size: 4cqi;
+            font-size: 6.5cqi;
             >.number{
                 color: var(--number-color);
             }
@@ -76,8 +133,8 @@ h1{
             rotate: calc(360deg /var(--dots)* var(--dot-idx));
             >.dot{
                 width: 100%;
-                aspect-ratio: 1/1;
-                background-color: var(--dot-color);
+                aspect-ratio: 1/1 ;
+                background-color: #009688;
                 border-radius: 50%;
                 transition: background-color .25s;
                 &[data-active=true]{
