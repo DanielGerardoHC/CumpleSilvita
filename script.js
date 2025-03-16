@@ -16,6 +16,17 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     })();
 });
+
+const playButton = document.getElementById("playButton");
+const audio = document.getElementById("audio");
+
+// Función para reproducir el audio al hacer clic en el botón
+playButton.addEventListener("click", function() {
+    audio.play();  // Reproduce el audio
+    playButton.disabled = true;  // Deshabilita el botón después de hacer clic
+    playButton.innerText = "Reproduciendo...";  // Cambia el texto del botón
+});
+
 countdownE1s.forEach(countdownE1 =>
     createCountdown(countdownE1))
 

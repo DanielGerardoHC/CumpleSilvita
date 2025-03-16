@@ -12,13 +12,9 @@
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1"></script>
 </head>
 <body>
-<audio autoplay>
-    <source src="./Media/Madonna%20-%20La%20Isla%20Bonita%20(Official%20Video).mp3" type="audio/mpeg">
-    Tu navegador no soporta audio
-</audio>
 <!-- nav bar-->
-<section id="navbar">
-    <nav class="navbar navbar-expand-lg bg-body-tertiary" style="background: transparent;">
+<sections id="navbar">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" style="font-family: 'Dancing Script', cursive; background-color: transparent;">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Inicio</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -28,13 +24,18 @@
                 <div class="navbar-nav">
                     <a class="nav-link active" aria-current="page" href="#Fecha">Fecha</a>
                     <a class="nav-link active" aria-current="page" href="#como llegar">Información</a>
-                    <a class="nav-link active" aria-current="page" href="#como llegar">Lugar</a>
+                    <a class="nav-link active" aria-current="page" href="#como llegar">Como llegar</a>
                 </div>
             </div>
         </div>
     </nav>
-</section>
+</sections>
 
+<button id="playButton" type="button" class="btn btn-outline-secondary">¡Click Aqui!</button>
+<audio id="audio" preload="auto">
+    <source src="./Media/Madonna%20-%20La%20Isla%20Bonita%20(Official%20Video).mp3" type="audio/mp3">
+    Tu navegador no soporta el elemento de audio.
+</audio>
 <section id="title" >
             <div class="imagen">
                 <img src="./Images/img-mesa-removebg.png" class="d-block mx-lg-auto img-fluid" alt="Silvia" height="200"
@@ -72,6 +73,8 @@
         </iframe>
     </div>
 </section>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
