@@ -5,15 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cumple años</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1"></script>
 </head>
 <body>
+<audio autoplay>
+    <source src="./Media/Madonna%20-%20La%20Isla%20Bonita%20(Official%20Video).mp3" type="audio/mpeg">
+    Tu navegador no soporta audio
+</audio>
+<!-- nav bar-->
+<sections id="navbar">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" style="background: transparent;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Inicio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" href="#Fecha">Fecha</a>
+                    <a class="nav-link active" aria-current="page" href="#como llegar">Información</a>
+                    <a class="nav-link active" aria-current="page" href="#como llegar">Lugar</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</sections>
+
+<section id="title" class="gradient-background">
+    <div class="container col-xxl-8 px-4 pt-5">
+        <div class="row flex-lg-row-reverse align-items-center g-5 pt-5">
+            <div class="imagen">
+                <img src="./Images/img-mesa-removebg.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" height="200"
+                     loading="lazy">
+            </div>
+            <h1 style="font-weight: bold; font-size: 2rem">Silvia Esmeralda<span></span></h1>
+            </div>
+        </div>
+    </div>
+</section>
+
     <h1>Cuenta regresiva para la fiesta<span></span></h1>
     <div class="countdown" data-target-date="2025-04-19 00:00:00"></div>
-    <a href="https://www.google.com/maps/place/Hotel+Alamo+Internacional/@13.6739789,-89.2338592,16z/data=!4m9!3m8!1s0x8f6331c9bc0e8d11:0xd9e5ac2de581189!5m2!4m1!1i2!8m2!3d13.6739794!4d-89.229483!16s%2Fg%2F11cmr3lx3q?entry=ttu&g_ep=EgoyMDI1MDMwNC4wIKXMDSoASAFQAw%3D%3D"><h2>¿Como llegar?</h2></a>
-    <div class="arrow-container">
-        <span class="arrow">↓</span> <!-- Flecha que gira -->
+     <div class="imagen">
+    <img src="./Images/img-banquito.jpeg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" height="200"
+         loading="lazy">
     </div>
+
+<section id="Fecha">
+     <div class="text-container">
+     <p class="paragraph">Me siento agradecida y bendecida por Dios por llegar a mis 50. Con mucha emocion de compartir con mi familia y mejores amigos ¡ven y acompañame!</p>
+         <p class="paragraph">¿Cuando?</p>
+         <h1 class="title"> 19 abril 2025</h1>
+     </div>
+</section>
+
+<section id="como llegar">
+  <div class="button">
+     <a href="https://www.google.com/maps/place/Hotel+Alamo+Internacional/@13.6739789,-89.2338592,16z/data=!4m9!3m8!1s0x8f6331c9bc0e8d11:0xd9e5ac2de581189!5m2!4m1!1i2!8m2!3d13.6739794!4d-89.229483!16s%2Fg%2F11cmr3lx3q?entry=ttu&g_ep=EgoyMDI1MDMwNC4wIKXMDSoASAFQAw%3D%3D">
+       <button type="button" class="btn btn-light"><h5>¿Como llegar?</h5></button>
+     </a>
+  </div>
     <div class="map-container">
         <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3876.73321602396!2d-89.23167183995248!3d13.673979566841467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f6331c9bc0e8d11%3A0xd9e5ac2de581189!2sHotel%20Alamo%20Internacional!5e0!3m2!1ses!2ssv!4v1741630795841!5m2!1ses!2ssv"
@@ -21,6 +76,7 @@
                 loading="lazy">
         </iframe>
     </div>
+</section>
     <script src="script.js"></script>
 </body>
 </html>

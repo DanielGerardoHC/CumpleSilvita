@@ -1,6 +1,6 @@
 const countdownE1s = document.querySelectorAll(".countdown")
 document.addEventListener("DOMContentLoaded", () => {
-    const duration = 200 * 1000; // 5 segundos de confeti
+    const duration = 5 * 1000; // 5 segundos de confeti
     const end = Date.now() + duration;
 
     (function frame() {

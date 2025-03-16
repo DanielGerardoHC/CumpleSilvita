@@ -10,7 +10,7 @@ body {
     display: grid;
     gap: 1rem;
     align-items: center;
-    background: linear-gradient(135deg, #fbe8a6, #f2d28a, #c6863b); /* Gradiente con mayor contraste */
+    background: linear-gradient(to right, #f2f0e6, #e1d9c6);/* Gradiente con mayor contraste */
     text-align: center;
     font-family: Arial, sans-serif;
 }
@@ -18,6 +18,11 @@ body {
 a {
     color: inherit;
     text-decoration: none;
+}
+.imagen
+{
+    display: block;
+    position: relative;
 }
 
 .map-container {
@@ -48,11 +53,47 @@ a {
     animation: spin 2s infinite linear;
 }
 
-/* Estilos de la flecha */
-.arrow {
-    font-size: 3em;
-    color: #ff5733;
-    transform: rotate(0deg); /* Inicia apuntando hacia abajo */
+.button{
+    text-align: center;
+    font-weight: bold;
+    position: relative;
+}
+.text-container {
+    text-align: center;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.title {
+    font-size: 5vw; /* Tamaño responsive basado en el ancho de la ventana */
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.paragraph {
+    font-size: 2em; /* Ajuste de tamaño de texto con em para mayor control */
+    color: #555;
+    text-align: justify;
+    line-height: 1.6;
+}
+/* Media Query para pantallas pequeñas */
+@media (max-width: 600px) {
+    .title {
+        font-size: 8vw; /* Reduce el tamaño de texto en pantallas pequeñas */
+    }
+
+    .paragraph {
+        font-size: 1.5em; /* Ajusta el tamaño del párrafo */
+    }
+}
+
+/* Media Query para pantallas de tablet */
+@media (max-width: 1024px) {
+    .title {
+        font-size: 6vw; /* Tamaño de texto moderado para pantallas medianas */
+    }
 }
 
 /* Animación para que la flecha gire */
@@ -71,7 +112,7 @@ a {
 h1{
     color: #ff5733;
     text-align: center;
-    font-family: 'Arial', sans-serif; /* Puedes usar una fuente moderna */
+    font-family: 'Dancing Script', cursive; /* Puedes usar una fuente moderna */
     font-style: italic; /* Cursiva */
     font-size: 2em; /* Tamaño grande */
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave para un toque bonito */
@@ -100,8 +141,8 @@ h2{
     --number-color: #ff5733;
     --text-color: #ff5733;
     --dot-color: hsl(0 0% 10%);
-    --dot-color-remaining: black;
-    --dot-color-active: hsl(0 100% 50%);
+    --dot-color-remaining: #ff5733;
+    --dot-color-active: #ff5733;
     display: grid;
     grid-template-columns: repeat(4,1fr);
     gap: 1rem;
@@ -135,7 +176,7 @@ h2{
             >.dot{
                 width: 100%;
                 aspect-ratio: 1/1 ;
-                background-color: #009688;
+                background-color: #ffc107;
                 border-radius: 50%;
                 transition: background-color .25s;
                 &[data-active=true]{
