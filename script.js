@@ -30,6 +30,15 @@ window.addEventListener("load", function() {
             .catch(error => console.log("Error al reproducir el audio:", error));
     }
 });
+window.addEventListener("scroll", function() {
+    if (!audioReproducido) { // Solo se reproduce una vez
+        audio.play()
+            .then(() => {
+                audioReproducido = true; // Evita que se repita
+            })
+            .catch(error => console.log("Error al reproducir el audio:", error));
+    }
+});
 
 countdownE1s.forEach(countdownE1 =>
     createCountdown(countdownE1))
