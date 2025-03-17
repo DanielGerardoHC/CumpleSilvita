@@ -1,6 +1,6 @@
 const countdownE1s = document.querySelectorAll(".countdown")
 document.addEventListener("DOMContentLoaded", () => {
-    const duration = 5 * 1000; // 5 segundos de confeti
+    const duration = 8 * 1000; // 5 segundos de confeti
     const end = Date.now() + duration;
 
     (function frame() {
@@ -17,14 +17,18 @@ document.addEventListener("DOMContentLoaded", () => {
     })();
 });
 
-const playButton = document.getElementById("playButton");
-const audio = document.getElementById("audio");
 
-// Función para reproducir el audio al hacer clic en el botón
-playButton.addEventListener("click", function() {
-    audio.play();  // Reproduce el audio
-    playButton.disabled = true;  // Deshabilita el botón después de hacer clic
-    playButton.innerText = "Reproduciendo...";  // Cambia el texto del botón
+
+const audio = document.getElementById("audio");
+let audioReproducido = false; // Bandera para evitar múltiples reproducciones
+window.addEventListener("scroll", function() {
+    if (!audioReproducido) { // Solo se reproduce una vez
+        audio.play()
+            .then(() => {
+                audioReproducido = true; // Evita que se repita
+            })
+            .catch(error => console.log("Error al reproducir el audio:", error));
+    }
 });
 
 countdownE1s.forEach(countdownE1 =>
