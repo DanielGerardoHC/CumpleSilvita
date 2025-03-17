@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 const audio = document.getElementById("audio");
 let audioReproducido = false; // Bandera para evitar múltiples reproducciones
-window.addEventListener("scroll", function() {
+window.addEventListener("load", function() {
     if (!audioReproducido) { // Solo se reproduce una vez
         audio.play()
             .then(() => {
