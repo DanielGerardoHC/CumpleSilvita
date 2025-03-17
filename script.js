@@ -1,6 +1,6 @@
 const countdownE1s = document.querySelectorAll(".countdown")
 document.addEventListener("DOMContentLoaded", () => {
-    const duration = 8 * 1000; // 5 segundos de confeti
+    const duration = 120 * 1000; // 5 segundos de confeti
     const end = Date.now() + duration;
 
     (function frame() {
@@ -21,6 +21,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
 const audio = document.getElementById("audio");
 let audioReproducido = false; // Bandera para evitar múltiples reproducciones
+
+document.addEventListener("DOMContentLoaded", () => {
+    if (!audioReproducido) { // Solo se reproduce una vez
+        audio.play()
+            .then(() => {
+                audioReproducido = true; // Evita que se repita
+            })
+            .catch(error => console.log("Error al reproducir el audio:", error));
+    }
+});
+
 window.addEventListener("load", function() {
     if (!audioReproducido) { // Solo se reproduce una vez
         audio.play()
